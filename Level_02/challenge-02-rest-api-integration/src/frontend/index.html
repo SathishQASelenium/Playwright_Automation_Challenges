@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONPlaceholder Users | TTA Integration Harness</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <p class="eyebrow">The Testing Academy · Level 2 · REST API Integration</p>
+            <h1>JSONPlaceholder Users</h1>
+            <p class="lede">
+                Live data from <code>https://jsonplaceholder.typicode.com/users</code>, rendered by a
+                small frontend used to verify API-to-UI data consistency.
+            </p>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="status-bar" aria-live="polite">
+            <p class="status" data-testid="status-message" data-tone="info">Loading users…</p>
+            <p class="api-status">
+                Last API response: <span data-testid="api-status" data-status="">—</span>
+            </p>
+        </section>
+
+        <section class="panel">
+            <h2>Create a user through the API</h2>
+            <p class="panel-hint">
+                Submitting this form performs <code>POST /users</code> and renders the API response.
+            </p>
+
+            <form id="create-user-form" data-testid="create-user-form" novalidate>
+                <label>
+                    Name
+                    <input data-testid="create-name" name="name" autocomplete="off" required>
+                </label>
+                <label>
+                    Username
+                    <input data-testid="create-username" name="username" autocomplete="off" required>
+                </label>
+                <label>
+                    Email
+                    <input data-testid="create-email" name="email" type="email" autocomplete="off" required>
+                </label>
+                <button type="submit" data-testid="create-submit">Create user</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <div class="panel-heading">
+                <h2>Users</h2>
+                <span class="count" data-testid="user-count">0</span>
+            </div>
+
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Email</th>
+                        </tr>
+                    </thead>
+                    <tbody data-testid="user-rows"></tbody>
+                </table>
+            </div>
+
+            <p class="empty" data-testid="empty-state" hidden>No users loaded.</p>
+            <p class="error" data-testid="error-message" hidden></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">API under test: JSONPlaceholder · Frontend: local integration harness</div>
+    </footer>
+
+    <script src="/app.js"></script>
+</body>
+</html>

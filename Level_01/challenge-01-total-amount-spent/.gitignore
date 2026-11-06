@@ -1,0 +1,36 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Playwright
+/test-results/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Playwright HTML report
+/playwright-report/
+
+# TTA custom reporter output
+/tta-report/
+
+# Winston logs
+/logs/
+
+# TypeScript build
+/dist/
+*.tsbuildinfo
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json

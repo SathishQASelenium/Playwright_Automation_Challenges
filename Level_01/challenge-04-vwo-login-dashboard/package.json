@@ -1,0 +1,24 @@
+{
+  "name": "challenge-04-vwo-login-dashboard",
+  "version": "1.0.0",
+  "description": "Automation Challenge 4 - VWO login, dashboard user validation, logout in parallel browsers",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:parallel": "playwright test --project=chromium --project=firefox --workers=2",
+    "test:report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^24.0.0",
+    "dotenv": "^17.4.2",
+    "typescript": "^5.7.0",
+    "winston": "^3.19.0"
+  }
+}

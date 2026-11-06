@@ -1,0 +1,22 @@
+{
+  "name": "challenge-03-modal-dialogs",
+  "version": "1.0.0",
+  "description": "Automation Challenge 3 - verify DemoQA small and large modal content",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:chromium": "playwright test --project=chromium",
+    "test:report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^24.0.0",
+    "dotenv": "^17.4.2",
+    "typescript": "^5.7.0",
+    "winston": "^3.19.0"
+  }
+}
